@@ -19,6 +19,10 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING,
       },
+      feature_id: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -27,7 +31,27 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
+    });
 
+    await queryInterface.createTable('features', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      name: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface) => {

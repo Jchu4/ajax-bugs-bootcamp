@@ -1,0 +1,10 @@
+.borders {
+  min-height: 300px;
+  border: solid 2px black;
+}
+
+.features {
+  border: solid 1px grey;
+  margin: 10px;
+  padding: 10px;
+}
